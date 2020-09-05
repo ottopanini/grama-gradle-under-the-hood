@@ -1,1 +1,1 @@
-rootProject.name = 'grama-gradle-under-the-hood'
+println ">>> settings.gradle --> This is executed during initialisation phase - timestamp @ ${gradle.timestamp()}"

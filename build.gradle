@@ -1,6 +1,13 @@
-logger.info "Hello!"
+println ">>> settings.gradle --> This is executed during configuration phase - timestamp @ ${gradle.timestamp()}"
 
-apply {
-    println "Hello again!!!"
-}
+
+// Lifecycle phases
+//  1. Initialization
+//       - creates project instances
+//       -> init.gradle
+//       -> settings.gradle
+//  2. Configuration
+//       -> build.gradle
+//  3. Execution
+//       -> tasks from build.gradle
 
