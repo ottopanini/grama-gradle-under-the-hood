@@ -19,3 +19,33 @@ Running script  ${relativePath(buildFile)}
 ******************************************************************************
 """
 
+logger.info "has property: ${project.gradle.hasProperty('gradleVersion')}"
+logger.info "has property: ${hasProperty('projectDir')}"
+
+if (project.hasProperty('gradlePropertiesProp')) {
+    logger.info "The property file value is $gradlePropertiesProp"
+} else {
+    logger.info "Ooops! gradlePropertiesProp can't be found"
+}
+
+if (project.hasProperty('commandLineProjectProp')) {
+    logger.info "The commandLine property value is $commandLineProjectProp"
+} else {
+    logger.info "Ooops! commandLineProjectProp can't be found"
+}
+
+// add custom properties
+project.ext.sayHello = "Hello!!"
+if (project.hasProperty('sayHello')) {
+    logger.info sayHello
+} else {
+    logger.info "Unable to say Hello!"
+}
+
+//testing availability of closures
+if (project.gradle.hasProperty('timestamp')) {
+    logger.info project.gradle.timestamp()
+} else {
+    logger.info "Ooops! timestamp() can't be found"
+}
+
