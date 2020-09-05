@@ -1,12 +1,12 @@
-#Destination
+# Destination
 Gradle under the hood.
 
-##Setup
+## Setup
 
 the **"init.d"** folder should be placed into **[USER_HOME]/.gradle** to work as expected
 
 ## Gradle Lifecycle phases
-###  1. Initialization
+### 1. Initialization
 - creates project instances
 - -> init.gradle
 - -> settings.gradle
